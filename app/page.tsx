@@ -16,21 +16,24 @@ const HomePage = () => {
           "sidebar tree stats"
         `,
         gap: "10px",
+        height: "100vh",
+        padding: "10px",
+        background: "#f8f9fa",
       }}
     >
       <div style={{ gridArea: "sidebar", background: "#f4f4f4", padding: "1rem", borderRadius: "5px" }}>
         <Sidebar />
       </div>
 
-      <div style={{ gridArea: "graph", background: "#fff", borderRadius: "5px" }}>
+      <div style={{ gridArea: "graph", background: "#ffffff", borderRadius: "5px", overflow: "hidden" }}>
         <GraphComponent />
       </div>
 
-      <div style={{ gridArea: "tree", background: "#fff", padding: "1rem", borderRadius: "5px" }}>
+      <div style={{ gridArea: "tree", background: "#ffffff", padding: "1rem", borderRadius: "5px" }}>
         <TreeComponent />
       </div>
 
-      <div style={{ gridArea: "stats", background: "#fff", padding: "1rem", borderRadius: "5px" }}>
+      <div style={{ gridArea: "stats", background: "#ffffff", padding: "1rem", borderRadius: "5px" }}>
         <ChartComponent />
       </div>
     </div>
@@ -38,6 +41,7 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
 
 
 
