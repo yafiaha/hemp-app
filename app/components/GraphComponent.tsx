@@ -11,42 +11,41 @@ const GraphComponent = () => {
         { data: { id: "a", label: "Strain A" } },
         { data: { id: "b", label: "Strain B" } },
         { data: { id: "c", label: "Strain C" } },
-        { data: { id: "d", label: "Strain D" } },
         { data: { source: "a", target: "b" } },
-        { data: { source: "a", target: "c" } },
-        { data: { source: "c", target: "d" } },
+        { data: { source: "b", target: "c" } },
       ],
       style: [
         {
           selector: "node",
           style: {
-            "background-color": "#2ecc71",
+            "background-color": "var(--primary-color)",
             "text-valign": "center",
-            "text-halign": "center",
             label: "data(label)",
-            color: "#fff",
-            "font-size": "10px",
+            color: "white",
+            "font-size": "12px",
           },
         },
         {
           selector: "edge",
           style: {
-            width: 2,
-            "line-color": "#3498db",
+            width: 3,
+            "line-color": "var(--accent-color)",
           },
         },
       ],
       layout: {
-        name: "concentric",
+        name: "breadthfirst",
+        directed: true,
         padding: 10,
       },
     });
 
-    return () => cy.destroy(); // Cleanup on unmount
+    return () => cy.destroy(); // Cleanup
   }, []);
 
   return <div id="cytoscape-container" style={{ height: "100%", width: "100%" }} />;
 };
 
 export default GraphComponent;
+
 

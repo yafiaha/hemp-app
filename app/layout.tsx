@@ -28,23 +28,25 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <CssBaseline /> {/* Ensures consistent baseline styles */}
+        <CssBaseline />
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
             minHeight: "100vh",
-            backgroundColor: "#f8f9fa",
+            backgroundColor: "var(--background-color)",
           }}
         >
           {/* Header */}
           <header
             style={{
-              background: "#0074d9",
-              color: "#fff",
+              background: "var(--primary-color)",
+              color: "white",
               padding: "1rem",
               textAlign: "center",
-              fontSize: "1.5rem",
+              fontSize: "1.8rem",
+              fontWeight: "bold",
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
             }}
           >
             Hemp Finder App
@@ -56,12 +58,12 @@ export default function RootLayout({
           {/* Footer */}
           <footer
             style={{
-              background: "#0074d9",
-              color: "#fff",
+              background: "var(--primary-color)",
+              color: "white",
               textAlign: "center",
               padding: "0.5rem",
               marginTop: "auto",
-              fontSize: "0.875rem",
+              fontSize: "1rem",
             }}
           >
             &copy; 2024 Hemp Finder App
@@ -71,4 +73,5 @@ export default function RootLayout({
     </html>
   );
 }
+
 
