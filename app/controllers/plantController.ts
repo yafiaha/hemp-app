@@ -7,7 +7,7 @@ export const getAllPlants = async (req: Request, res: Response): Promise<void> =
     const plants = await Plant.find();
     res.status(200).json(plants);
   } catch (err) {
-    console.error("Error fetching plants:", err); // Log the error
+    console.error("Error fetching plants:", err); 
     res.status(500).json({ error: "Error fetching plants" });
   }
 };
@@ -22,7 +22,7 @@ export const getPlantById = async (req: Request, res: Response): Promise<void> =
     }
     res.status(200).json(plant);
   } catch (err) {
-    console.error("Error fetching plant:", err); // Log the error
+    console.error("Error fetching plant:", err); 
     res.status(500).json({ error: "Error fetching plant" });
   }
 };
@@ -35,7 +35,7 @@ export const createPlant = async (req: Request, res: Response): Promise<void> =>
     const savedPlant = await newPlant.save();
     res.status(201).json(savedPlant);
   } catch (err) {
-    console.error("Error saving plant:", err); // Log the error
+    console.error("Error saving plant:", err); 
     res.status(400).json({ error: "Error saving plant" });
   }
 };
@@ -50,7 +50,7 @@ export const updatePlant = async (req: Request, res: Response): Promise<void> =>
     }
     res.status(200).json(updatedPlant);
   } catch (err) {
-    console.error("Error updating plant:", err); // Log the error
+    console.error("Error updating plant:", err);
     res.status(400).json({ error: "Error updating plant" });
   }
 };
@@ -65,7 +65,7 @@ export const deletePlant = async (req: Request, res: Response): Promise<void> =>
     }
     res.status(200).json({ message: "Plant deleted successfully" });
   } catch (err) {
-    console.error("Error deleting plant:", err); // Log the error
+    console.error("Error deleting plant:", err); 
     res.status(500).json({ error: "Error deleting plant" });
   }
 };
